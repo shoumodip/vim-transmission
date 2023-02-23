@@ -32,7 +32,7 @@ function! transmission#update()
     endif
 
     setlocal modifiable
-    silent! call deletebufline(".", 1, "$")
+    silent! call deletebufline("", 1, "$")
     silent! call setline(1, systemlist("transmission-remote -l")[:-2])
     setlocal nomodifiable
 endfunction
